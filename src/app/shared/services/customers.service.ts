@@ -1,6 +1,5 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Customers} from '../models/Customers';
-import {count} from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +22,10 @@ export class CustomersService {
   addCustomer(customer: Customers) {
     // Add an object customer
     return this.customers.push(customer);
+  }
+
+  getCustomerById(id: number) {
+    return this.customers.find(cust => cust.id === id);
   }
 
 }
