@@ -1,6 +1,6 @@
 <p>customers-list works!</p>
 nbre click: {{ click }}
-<button class="btn btn-primary" (click)="nbreClick()">click</button>
+<button class="btn btn-primary" (click)="addCustomer()"> Add Customer </button>
 <ul>
   <li *ngFor="let cc of customers" > {{ cc.id }} {{ cc.firstName }} last name: {{ cc.lastName }} </li>
 </ul>
