@@ -1,0 +1,20 @@
+<p>customer-update works!</p>
+<button routerLink="/customers">Back to customers list</button>
+<!--  Add form here -->
+<form [formGroup]="customerForm" (ngSubmit)="update()" >
+
+  <label for="">First Name:
+    <input type="text" formControlName="firstName" >
+  </label>
+
+  <label for="">lastName:
+    <input type="text" formControlName="lastName" >
+  </label>
+
+  <label for="">Adresse :
+    <input type="text" formControlName="adresse" >
+  </label>
+
+  <button type="submit" [disabled]="!customerForm.valid" class="btn btn-primary btn-sm" >Update customer</button>
+
+</form>

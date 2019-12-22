@@ -19,6 +19,11 @@ export class CustomersService {
   getCustomers(): Customers[] {
     return this.customers;
   }
+  updateCustomer(customer: Customers) {
+    const custToUpdate = this.customers.find(cust => customer.id === cust.id);
+    const index = this.customers.indexOf(custToUpdate);
+    this.customers[index] = customer;
+  }
 
   addCustomer(customer: Customers) {
     // Add an object customer
@@ -32,5 +37,11 @@ export class CustomersService {
     // tslint:disable-next-line:no-shadowed-variable
     return this.customers.find(customer => customer.id === id);
   }
+
+  deleteCustomer(id: number) {
+    this.customers = this.customers.filter(cust => cust.id !== id);
+  }
+
+
 
 }

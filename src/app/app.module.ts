@@ -9,6 +9,7 @@ import {WelcomeComponent} from './welcome/welcome.component';
 import {CustomerDetailsComponent} from './customers/customer-details/customer-details.component';
 import { CustomerAddComponent } from './customers/customer-add/customer-add.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { CustomerUpdateComponent } from './customers/customer-update/customer-update.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {ReactiveFormsModule} from "@angular/forms";
     NavbarComponent,
     WelcomeComponent,
     CustomerDetailsComponent,
-    CustomerAddComponent
+    CustomerAddComponent,
+    CustomerUpdateComponent
   ],
   imports: [
     BrowserModule,

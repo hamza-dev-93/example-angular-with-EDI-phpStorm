@@ -18,5 +18,10 @@ export class CustomersListComponent implements OnInit {
     this.customers = this.customerServ.getCustomers();
   }
 
+  delete(id: number) {
+    console.log('idcc= ', id);
+    this.customerServ.deleteCustomer(id);
+    this.customers = this.customerServ.getCustomers();
+  }
 
 }
