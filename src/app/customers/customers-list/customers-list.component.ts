@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Customers } from '../../shared/models/Customers';
-import { CustomersService } from '../../shared/services/customers.service';
+import {Component, OnInit} from '@angular/core';
+import {Customers} from '../../shared/models/Customers';
+import {CustomersService} from '../../shared/services/customers.service';
 
 @Component({
   selector: 'app-customers-list',
@@ -10,6 +10,7 @@ import { CustomersService } from '../../shared/services/customers.service';
 export class CustomersListComponent implements OnInit {
   customers: Customers[];
   click = 0;
+
   constructor(private customerServ: CustomersService) {
   }
 
@@ -20,10 +21,10 @@ export class CustomersListComponent implements OnInit {
   addCustomer() {
     this.customerServ.addCustomer({
       id: this.customers.length,
-      firstName: 'zaza',
+      firstName: 'zaza-' + this.customers.length,
       lastName: 'zouzozu',
-      adresse: 'clichy'
-    })
+      adresse: 'Paris ' + this.customers.length
+    });
 
   }
 

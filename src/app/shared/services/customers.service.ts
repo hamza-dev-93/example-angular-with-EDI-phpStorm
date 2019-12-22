@@ -10,8 +10,8 @@ export class CustomersService {
 
   constructor() {
     this.customers = [
-      { id: 0, firstName: 'Hamza', lastName: 'BH', adresse: 'Paris' },
-      { id: 1, firstName: 'Haroun', lastName: 'vv', adresse: 'Vertis' }
+      {id: 1, firstName: 'Hamza', lastName: 'BH', adresse: 'Paris 11'},
+      {id: 2, firstName: 'Haroun', lastName: 'vv', adresse: 'Vertis'}
     ];
   }
 
@@ -25,7 +25,10 @@ export class CustomersService {
   }
 
   getCustomerById(id: number) {
-    return this.customers.find(cust => cust.id === id);
+    console.log('idcc', id);
+    // console.log('getCustom', this.customers.find(Customers[id]));
+    // tslint:disable-next-line:no-shadowed-variable
+    return this.customers.find(customer => customer.id === id);
   }
 
 }
