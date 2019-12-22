@@ -18,14 +18,5 @@ export class CustomersListComponent implements OnInit {
     this.customers = this.customerServ.getCustomers();
   }
 
-  addCustomer() {
-    this.customerServ.addCustomer({
-      id: this.customers.length,
-      firstName: 'zaza-' + this.customers.length,
-      lastName: 'zouzozu',
-      adresse: 'Paris ' + this.customers.length
-    });
-
-  }
 
 }

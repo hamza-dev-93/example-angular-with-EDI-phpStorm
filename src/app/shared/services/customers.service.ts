@@ -7,11 +7,12 @@ import {Customers} from '../models/Customers';
 export class CustomersService {
   // handle data !!
   customers: Customers[];
+  id = 1;
 
   constructor() {
     this.customers = [
-      {id: 1, firstName: 'Hamza', lastName: 'BH', adresse: 'Paris 11'},
-      {id: 2, firstName: 'Haroun', lastName: 'vv', adresse: 'Vertis'}
+      {id: this.id++, firstName: 'Hamza', lastName: 'BH', adresse: 'Paris 11'},
+      {id: this.id++, firstName: 'Haroun', lastName: 'vv', adresse: 'Vertis'}
     ];
   }
 
@@ -21,6 +22,7 @@ export class CustomersService {
 
   addCustomer(customer: Customers) {
     // Add an object customer
+    customer.id = this.id++;
     return this.customers.push(customer);
   }
 

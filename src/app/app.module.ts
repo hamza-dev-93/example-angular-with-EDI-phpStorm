@@ -7,6 +7,8 @@ import {CustomersListComponent} from './customers/customers-list/customers-list.
 import {NavbarComponent} from './shared/navbar/navbar.component';
 import {WelcomeComponent} from './welcome/welcome.component';
 import {CustomerDetailsComponent} from './customers/customer-details/customer-details.component';
+import { CustomerAddComponent } from './customers/customer-add/customer-add.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import {CustomerDetailsComponent} from './customers/customer-details/customer-de
     CustomersListComponent,
     NavbarComponent,
     WelcomeComponent,
-    CustomerDetailsComponent
+    CustomerDetailsComponent,
+    CustomerAddComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,10 @@
+<h1>Customer Details</h1>
+<div *ngIf="customer" >
+<h2> {{ customer.id }} </h2>
+<h3> {{ customer.firstName }} - {{ customer.lastName }} </h3>
+<h4> {{ customer.adresse }} </h4>
+</div>
+<div *ngIf="!customer" >
+<h1>Customer not found</h1>
+
+</div>
